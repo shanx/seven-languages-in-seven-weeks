@@ -1,0 +1,23 @@
+Answer:
+
+Weakly or strongly typed: Io is dynamically, strongly typed. It remembers all the types used and does not do any implicit conversions. The moment an operation is done on two distinct types Io raises an exception.
+
+1 + "one" -> exception
+"one" + 1 -> exception
+1 + 1 -> 2
+
+
+Is 0 true or false? 0 is true: 0 and true gives true
+Empty string? empty string is true: "" and true gives true
+Nil? Nil is false: nil and true gives false
+
+How can we tell what slots a protype supports? By using the proto message on an object
+
+What is difference between =, := and ::=
+
+= only assigns a value to an existing slot. Use this to update a value that already exists.
+:= creates a slot and assigns the value. Use this to assign a value to a new variable or create new method on an object
+::= creates a slot and automatically creates a setter method on the object and assigns the value. Use this to initially set value of a variable in an object.
+
+
+
