@@ -1,4 +1,4 @@
-Answer:
+Answers:
 
 Weakly or strongly typed: Io is dynamically, strongly typed. It remembers all the types used and does not do any implicit conversions. The moment an operation is done on two distinct types Io raises an exception.
 
@@ -19,5 +19,13 @@ What is difference between =, := and ::=
 := creates a slot and assigns the value. Use this to assign a value to a new variable or create new method on an object
 ::= creates a slot and automatically creates a setter method on the object and assigns the value. Use this to initially set value of a variable in an object.
 
+Run an Io program from a file
+io hello-world.io
 
+Execute code in a slot given its name
+Sent the name of the slot as a message to the object, for example:
+
+foo := Object clone
+foo bar := method("I've executed" println)
+foo bar 
 
