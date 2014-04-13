@@ -23,9 +23,9 @@ Run an Io program from a file
 io hello-world.io
 
 Execute code in a slot given its name
-Sent the name of the slot as a message to the object, for example:
+Use the perform message on an object, for example
 
 foo := Object clone
 foo bar := method("I've executed" println)
-foo bar 
+foo perform("bar")
 
