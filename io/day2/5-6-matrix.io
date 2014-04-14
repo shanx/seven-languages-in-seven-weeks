@@ -1,5 +1,3 @@
-// Write a prototype for a two-dimensional list. The dimx(x,y) method should allocate a list of y lists that are x elements long, set(x, y, value) should set a value, and get(x, y) should return that value
-
 Matrix := Object clone
 
 Matrix data := list()
@@ -18,6 +16,8 @@ Matrix get := method(x, y,
 )
 
 
+// 5:  Write a prototype for a two-dimensional list. The dimx(x,y) method should allocate a list of y lists that are x elements long, set(x, y, value) should set a value, and get(x, y) should return that value
+
 m := Matrix clone
 m dim(5, 10)
 m data println
@@ -28,3 +28,4 @@ m data println
 m get(1, 1) println
 m get(2, 2) println
 
+// 6: Bonus: write a transpose mthoe so that (new_matrix get(y,x)) == matrix get(x,y) on the original list
