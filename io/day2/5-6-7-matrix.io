@@ -1,47 +1,48 @@
-Matrix := Object clone
+Matrix := Object clone do(
+    init := method(x, y,
+        self data := nil
+        self sizeX := 0
+        self sizeY := 0
+    )
 
-Matrix init := method(x, y,
-    self data := nil
-    self sizeX := 0
-    self sizeY := 0
-)
+    dim := method(x, y,
+        data := List clone setSize(x)
+        data = data map(e, List clone setSize(y))
+        self data = data
+        self sizeX = x
+        self sizeY = y
+    )
 
-Matrix dim := method(x, y,
-    data := List clone setSize(x)
-    data = data map(e, List clone setSize(y))
-    self data = data
-    self sizeX = x
-    self sizeY = y
-)
+    getSizeX := method(
+        self sizeX
+    )
 
-Matrix getSizeX := method(
-    self sizeX
-)
+    getSizeY := method(
+        self sizeY
+    )
 
-Matrix getSizeY := method(
-    self sizeY
-)
+    set := method(x, y, value,
+        (self data at(x)) atPut(y, value)
+    )
 
-Matrix set := method(x, y, value,
-    (self data at(x)) atPut(y, value)
-)
+    get := method(x, y,
+        (self data at(x)) at(y)
+    )
 
-Matrix get := method(x, y,
-    (self data at(x)) at(y)
-)
-
-Matrix println := method(
-    self data println
+    println := method(
+        self data println
+    )
 )
 
 // 5:  Write a prototype for a two-dimensional list. The dimx(x,y) method should allocate a list of y lists that are x elements long, set(x, y, value) should set a value, and get(x, y) should return that value
 
 "Excersize 5:" println
-matrix := Matrix clone
-matrix dim(5, 3)
+matrix := Matrix clone do(
+    dim(5,3)
+    set(0, 2, 123)
+    set(3, 1, 456)
+)
 
-matrix set(0, 2, 123)
-matrix set(3, 1, 456)
 matrix println
 
 matrix get(0, 2) println
