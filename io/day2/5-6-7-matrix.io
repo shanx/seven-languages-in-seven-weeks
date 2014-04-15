@@ -1,5 +1,5 @@
 Matrix := Object clone do(
-    init := method(x, y,
+    init := method(
         self data := nil
         self sizeX := 0
         self sizeY := 0
